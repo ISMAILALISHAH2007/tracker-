@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07090e" />
+      <stop offset="50%" stop-color="#0d121d" />
+      <stop offset="100%" stop-color="#161e31" />
+    </linearGradient>
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="50%" stop-color="#0ea5e9" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Base Background -->
+  <rect width="512" height="512" rx="128" fill="url(#bgGrad)" />
+  <rect width="504" height="504" x="4" y="4" rx="124" fill="none" stroke="url(#ringGrad)" stroke-width="6" opacity="0.6" />
+  
+  <!-- Outer Radar Pulse Rings -->
+  <circle cx="256" cy="256" r="190" fill="none" stroke="#6366f1" stroke-width="4" stroke-dasharray="8 8" opacity="0.3" />
+  <circle cx="256" cy="256" r="140" fill="none" stroke="#0ea5e9" stroke-width="4" opacity="0.4" />
+  <circle cx="256" cy="256" r="90" fill="none" stroke="#10b981" stroke-width="4" opacity="0.5" />
+
+  <!-- Center Pin & Radio Waves -->
+  <g filter="url(#glow)">
+    <!-- Location Pin -->
+    <path d="M256 120 C190 120 136 174 136 240 C136 320 256 410 256 410 C256 410 376 320 376 240 C376 174 322 120 256 120 Z" fill="url(#ringGrad)" />
+    <!-- Center Dot -->
+    <circle cx="256" cy="240" r="42" fill="#07090e" />
+    <circle cx="256" cy="240" r="24" fill="#38bdf8" />
+  </g>
+</svg>

@@ -1,0 +1,56 @@
+{
+  "name": "Family Tracker PRO MAX",
+  "short_name": "FamilyTracker",
+  "description": "Real-time geolocation telemetry, safe zones, and arrival monitoring for families",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "background_color": "#07090e",
+  "theme_color": "#07090e",
+  "orientation": "portrait-primary",
+  "categories": ["navigation", "safety", "utilities", "lifestyle"],
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Command Center",
+      "short_name": "Monitor",
+      "description": "Open live family map & radar telemetry",
+      "url": "/monitor",
+      "icons": [{ "src": "/icon-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Tracker Cockpit",
+      "short_name": "Track Me",
+      "description": "Broadcast live GPS coordinates and speed",
+      "url": "/tracker",
+      "icons": [{ "src": "/icon-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Emergency SOS",
+      "short_name": "SOS Beacon",
+      "description": "Trigger emergency distress broadcast",
+      "url": "/tracker?sos=true",
+      "icons": [{ "src": "/icon-192x192.png", "sizes": "192x192" }]
+    }
+  ]
+}
